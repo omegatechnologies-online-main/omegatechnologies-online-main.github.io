@@ -1,0 +1,9 @@
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-\[marquee_30s_linear_infinite\] {
+  animation: marquee 30s linear infinite;
+  /* Will contain duplicate elements so it scrolls infinitely without jumping */
+}

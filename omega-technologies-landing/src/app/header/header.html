@@ -1,0 +1,44 @@
+<header [ngClass]="{'bg-[#30475E]/95 backdrop-blur-md shadow-lg': isScrolled, 'bg-transparent': !isScrolled}" class="fixed w-full z-50 transition-all duration-300 ease-in-out py-4">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <!-- Logo -->
+    <a routerLink="/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#F05454] to-[#ff7a7a] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+        <span class="text-white font-bold text-xl">Ω</span>
+      </div>
+      <span [ngClass]="{'text-white': isScrolled, 'text-[#121212]': !isScrolled}" class="text-xl font-bold tracking-tight transition-colors duration-300">
+        Omega Tech
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#services" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-sm font-medium transition-colors duration-200">Services</a>
+      <a href="#leadership" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-sm font-medium transition-colors duration-200">Leadership</a>
+      <a href="#team" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-sm font-medium transition-colors duration-200">Team</a>
+
+      <a routerLink="/contact" class="bg-[#F05454] hover:bg-[#d94444] text-white px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 hover:shadow-[0_0_15px_rgba(240,84,84,0.4)] hover:-translate-y-0.5">
+        Apply Now
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-md focus:outline-none" [ngClass]="{'text-white': isScrolled, 'text-[#121212]': !isScrolled}">
+      <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div *ngIf="isMobileMenuOpen" class="md:hidden absolute top-full left-0 w-full bg-[#30475E] border-t border-white/10 shadow-xl">
+    <div class="flex flex-col px-6 py-4 space-y-4">
+      <a href="#services" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Services</a>
+      <a href="#leadership" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Leadership</a>
+      <a href="#team" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Team</a>
+      <a routerLink="/contact" (click)="toggleMobileMenu()" class="bg-[#F05454] text-white text-center px-6 py-3 rounded-md font-medium mt-4">Apply Now</a>
+    </div>
+  </div>
+</header>
