@@ -17,12 +17,10 @@ import { CommonModule } from '@angular/common';
       <!-- Preloader Content -->
       <div class="relative z-10 flex flex-col items-center">
         <!-- Logo Animation -->
-        <div class="relative w-24 h-24 mb-8">
+        <div class="relative w-32 h-32 mb-8 flex items-center justify-center">
           <div class="absolute inset-0 border-t-2 border-r-2 border-[#F05454] rounded-full animate-spin"></div>
           <div class="absolute inset-2 border-b-2 border-l-2 border-[#30475E] rounded-full animate-[spin_2s_linear_infinite_reverse]"></div>
-          <div class="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold tracking-tighter shadow-lg">
-            Ω
-          </div>
+          <img src="logo.jpg" alt="Omega Technologies" class="w-16 h-16 rounded-sm object-contain z-10 shadow-lg">
         </div>
 
         <h2 class="text-white text-2xl md:text-4xl font-bold tracking-tight mb-3 opacity-0 animate-[fadeUp_1s_ease-out_ forwards]">
