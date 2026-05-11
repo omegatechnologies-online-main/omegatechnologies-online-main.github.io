@@ -1,7 +1,7 @@
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[#F5F5F5] bg-cover bg-center bg-no-repeat" style="background-image: url('logo-full.jpg');">
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-transparent">
   <!-- Decorative Background Elements & Overlay -->
-  <div class="absolute inset-0 bg-white/60"></div>
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 bg-white/40" style="background-image: url('OMback.png');"></div>
   <div class="absolute inset-0 pointer-events-none z-0">
     <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#F05454]/10 rounded-full blur-3xl"></div>
     <div class="absolute bottom-1/4 left-10 w-72 h-72 bg-[#30475E]/10 rounded-full blur-3xl"></div>
@@ -10,18 +10,18 @@
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
       <h1 class="text-5xl md:text-7xl font-extrabold text-[#121212] tracking-tight leading-tight mb-6">
-        We're Not Just an Agency, <br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F05454] to-[#30475E]">We Are Your New Team.</span>
+        You Bring the Spark, <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F05454] to-[#30475E]">We Bring the Fire.</span>
       </h1>
       <p class="text-xl md:text-2xl text-[#121212]/70 font-medium mb-10 max-w-2xl leading-relaxed">
-        Built by real operators running elite brands — the same team scaling ours is now scaling yours.
+        We build your business engine with our tech. The same team scaling elite brands is now scaling yours.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
         <a routerLink="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 bg-[#F05454] text-white font-semibold rounded-full overflow-hidden transition-transform hover:scale-105 shadow-lg shadow-[#F05454]/30">
           <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
           <span class="relative flex items-center gap-2">
-            Apply Now
+            Enquire now!
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </span>
         </a>
@@ -41,18 +41,18 @@
   <div class="absolute left-0 w-32 h-full bg-gradient-to-r from-[#121212] to-transparent z-10"></div>
   <div class="absolute right-0 w-32 h-full bg-gradient-to-l from-[#121212] to-transparent z-10"></div>
 
-  <div class="flex whitespace-nowrap animate-[marquee_30s_linear_infinite] items-center gap-16 px-8">
-    <ng-container *ngFor="let _ of [1,2,3]">
-      <span class="text-[#F5F5F5]/40 text-lg font-semibold tracking-wider uppercase">Trusted by brands that move</span>
+  <div class="flex whitespace-nowrap animate-marquee items-center gap-16 px-8">
+    <ng-container *ngFor="let _ of [1,2,3,4]">
+      <span class="text-[#F5F5F5]/40 text-lg font-semibold tracking-wider uppercase flex-shrink-0">Trusted by brands that move</span>
       <ng-container *ngFor="let partner of partners">
-        <span class="text-white/80 font-bold text-xl">{{partner}}</span>
+        <span class="text-white/80 font-bold text-xl flex-shrink-0">{{partner}}</span>
       </ng-container>
     </ng-container>
   </div>
 </section>
 
 <!-- Services Section -->
-<section id="services" class="py-24 bg-[#F5F5F5]">
+<section id="services" class="py-24 bg-white/70 backdrop-blur-sm">
   <div class="container mx-auto px-6">
     <div class="max-w-3xl mb-16" data-aos="fade-up">
       <h2 class="text-[#30475E] font-semibold tracking-wider uppercase text-sm mb-3">Engineering Business Growth</h2>
@@ -107,7 +107,7 @@
 </section>
 
 <!-- Team / Scaling CTA Section -->
-<section id="team" class="py-32 bg-[#F5F5F5] relative">
+<section id="team" class="py-32 bg-white/70 backdrop-blur-sm relative">
   <div class="container mx-auto px-6">
     <div class="bg-[#121212] rounded-3xl p-10 md:p-20 text-center relative overflow-hidden shadow-2xl" data-aos="fade-up">
       <!-- Glow effect -->
@@ -120,7 +120,7 @@
         </p>
 
         <a routerLink="/contact" class="group inline-flex items-center justify-center px-10 py-5 bg-[#F05454] text-white text-xl font-bold rounded-full transition-all duration-300 hover:bg-[#d94444] hover:scale-105 shadow-[0_0_40px_rgba(240,84,84,0.3)] hover:shadow-[0_0_60px_rgba(240,84,84,0.5)]">
-          Apply Now
+          Enquire now!
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="ml-3 group-hover:translate-x-2 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>

@@ -12,7 +12,7 @@ import * as AOS from 'aos';
   template: `
     <app-preloader></app-preloader>
     <app-header></app-header>
-    <main class="min-h-screen bg-[#F5F5F5] text-[#121212] overflow-hidden">
+    <main class="min-h-screen bg-transparent text-[#121212] overflow-hidden">
       <router-outlet></router-outlet>
     </main>
     <app-footer></app-footer>

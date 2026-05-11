@@ -21,7 +21,7 @@ export class Home implements OnInit, AfterViewInit {
 
   services: { title: string, description: string, icon: SafeHtml }[] = [];
 
-  partners = ['Microsoft', 'Google', 'Amazon AWS', 'Stripe', 'Meta', 'OpenAI', 'Vercel', 'Supabase'];
+  partners = ['Gahranox', 'Ocean Blender', 'Brand Revenue', 'Carlos dreams', 'Aanchal Designs'];
 
   constructor(private sanitizer: DomSanitizer) {}
 

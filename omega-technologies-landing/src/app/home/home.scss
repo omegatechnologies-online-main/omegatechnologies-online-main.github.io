@@ -3,7 +3,6 @@
   100% { transform: translateX(-50%); }
 }
 
-.animate-\[marquee_30s_linear_infinite\] {
-  animation: marquee 30s linear infinite;
-  /* Will contain duplicate elements so it scrolls infinitely without jumping */
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
