@@ -1,0 +1,113 @@
+<section class="min-h-screen pt-32 pb-24 bg-[#F5F5F5] relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-[#30475E]/5 rounded-bl-[100px] pointer-events-none"></div>
+  <div class="absolute top-40 right-20 w-64 h-64 bg-[#F05454]/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+      <!-- Text Content -->
+      <div data-aos="fade-right">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-[#121212] tracking-tight leading-tight mb-6">
+          Connect with <br/>
+          <span class="text-[#F05454]">the Engineers.</span>
+        </h1>
+        <p class="text-xl text-[#121212]/70 mb-12 leading-relaxed">
+          Have a question about our infrastructure, AI systems, or brand growth services? Reach out directly. Our team of operators is ready to help you scale.
+        </p>
+ 
+        <div class="space-y-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#30475E]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#30475E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#121212] mb-1">Email Support</h3>
+              <p class="text-[#121212]/70 hover:text-[#F05454] transition-colors cursor-pointer">hello&#64;omegatechnologies.online</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#30475E]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#30475E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#121212] mb-1">Call Us</h3>
+              <p class="text-[#121212]/70">+1 (555) 000-0000</p>
+            </div>
+          </div>
+ 
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#30475E]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#30475E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#121212] mb-1">Headquarters</h3>
+              <p class="text-[#121212]/70">India | Australia | Dubai<br/>Global Remote Operations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl shadow-[#30475E]/10 border border-gray-100" data-aos="fade-left" data-aos-delay="200">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-[#121212]">Full Name <span class="text-[#F05454]">*</span></label>
+              <input type="text" formControlName="name" class="w-full px-4 py-3 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#F05454] focus:bg-white focus:ring-0 transition-colors outline-none" placeholder="John Doe">
+              <span *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-xs text-[#F05454] font-medium">Name is required</span>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-[#121212]">Email Address <span class="text-[#F05454]">*</span></label>
+              <input type="email" formControlName="email" class="w-full px-4 py-3 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#F05454] focus:bg-white focus:ring-0 transition-colors outline-none" placeholder="john@company.com">
+              <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-xs text-[#F05454] font-medium">Valid email is required</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-[#121212]">Company Name</label>
+            <input type="text" formControlName="company" class="w-full px-4 py-3 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#F05454] focus:bg-white focus:ring-0 transition-colors outline-none" placeholder="Your Company Ltd">
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-[#121212]">Primary Interest <span class="text-[#F05454]">*</span></label>
+            <select formControlName="interest" class="w-full px-4 py-3 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#F05454] focus:bg-white focus:ring-0 transition-colors outline-none appearance-none">
+              <option value="" disabled selected>Select an option</option>
+              <option value="dev">Web Development & Architecture</option>
+              <option value="ai">AI & Workflow Automation</option>
+              <option value="marketing">Brand Marketing & Promotion</option>
+              <option value="other">Other</option>
+            </select>
+            <span *ngIf="contactForm.get('interest')?.invalid && contactForm.get('interest')?.touched" class="text-xs text-[#F05454] font-medium">Please select your interest</span>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-[#121212]">How can we help? <span class="text-[#F05454]">*</span></label>
+            <textarea formControlName="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#F05454] focus:bg-white focus:ring-0 transition-colors outline-none resize-none" placeholder="Tell us about your project goals..."></textarea>
+            <span *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-xs text-[#F05454] font-medium">Message is required</span>
+          </div>
+
+          <button type="submit" [disabled]="isSubmitted" class="w-full py-4 bg-[#121212] text-white font-bold rounded-xl hover:bg-[#30475E] transition-colors duration-300 flex items-center justify-center gap-2 group relative overflow-hidden">
+            <span *ngIf="!isSubmitted" class="relative z-10 flex items-center gap-2">
+              Submit Application
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </span>
+            <span *ngIf="isSubmitted" class="relative z-10 flex items-center gap-2">
+              <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Processing...
+            </span>
+            <!-- Hover effect -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#F05454] to-[#ff7a7a] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

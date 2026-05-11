@@ -1,0 +1,55 @@
+<section class="min-h-screen pt-32 pb-24 bg-[#F5F5F5] relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <div class="absolute top-0 left-0 w-full h-96 bg-[#30475E] -skew-y-3 origin-top-left -z-0"></div>
+  <div class="absolute top-40 left-10 w-64 h-64 bg-[#F05454]/20 rounded-full blur-[80px] pointer-events-none z-0"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+      <h2 class="text-[#F05454] font-semibold tracking-wider uppercase text-sm mb-3">The Minds Behind the Tech</h2>
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">Meet the Operators.</h1>
+      <p class="text-white/70 text-xl leading-relaxed">
+        We aren't just developers; we are business builders. We engineer the exact systems we use to run our own elite brands.
+      </p>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div *ngFor="let member of teamMembers; let i = index" 
+           class="bg-white rounded-3xl p-8 shadow-2xl shadow-[#30475E]/10 border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300"
+           data-aos="fade-up" [attr.data-aos-delay]="i * 200">
+        
+        <div class="w-32 h-32 rounded-2xl overflow-hidden mb-6 border-4 border-[#F5F5F5] group-hover:border-[#F05454]/20 transition-colors duration-300">
+          <img [src]="member.image" [alt]="member.name" class="w-full h-full object-cover">
+        </div>
+
+        <h3 class="text-2xl font-bold text-[#121212] mb-2">{{member.name}}</h3>
+        <p class="text-[#F05454] font-semibold mb-4">{{member.role}}</p>
+        <p class="text-[#121212]/70 leading-relaxed mb-8">
+          {{member.bio}}
+        </p>
+
+        <div class="flex gap-4">
+          <span class="px-3 py-1 bg-[#30475E]/5 text-[#30475E] text-xs font-bold rounded-full">AI Flow Expert</span>
+          <span class="px-3 py-1 bg-[#30475E]/5 text-[#30475E] text-xs font-bold rounded-full">Tech Lead</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise Section -->
+    <div class="mt-32 bg-[#121212] rounded-3xl p-10 md:p-16 text-center relative overflow-hidden" data-aos="fade-up">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-[#F05454]/10 rounded-full blur-[80px] pointer-events-none"></div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 relative z-10">
+        "The best tech developers and AI flow workers in the industry."
+      </h2>
+      <p class="text-gray-400 text-lg mb-12 max-w-3xl mx-auto relative z-10">
+        We specialize in building the digital backbone for modern businesses. From complex AI pipelines to high-conversion web architectures, we move the needle where it matters most.
+      </p>
+
+      <a routerLink="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-[#F05454] text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-[#F05454]/20">
+        Work with us
+      </a>
+    </div>
+  </div>
+</section>
