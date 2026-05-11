@@ -28,7 +28,7 @@ jobs:
         run: bun run build -- --configuration=production --base-href="/"
 
       - name: Add CNAME file
-        run: echo "omegatechnologies.online" > dist/omega-technologies-landing/browser/CNAME
+        run: cp public/CNAME dist/omega-technologies-landing/browser/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
