@@ -1,0 +1,15 @@
+<section class="min-h-screen pt-32 pb-24 bg-[#F5F5F5]">
+  <div class="container mx-auto px-6">
+    <h1 class="text-5xl font-extrabold text-[#121212] mb-12">Our Blog</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let b of blogs" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+        <div class="h-48 w-full bg-cover bg-center" [style.background-image]="'url(' + b.image + ')'"></div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h2 class="text-2xl font-semibold text-[#121212] mb-4 flex-grow">{{b.title}}</h2>
+          <p class="text-[#121212]/70 mb-6">{{b.excerpt}}</p>
+          <a [routerLink]="[b.link]" class="text-[#F05454] font-bold hover:underline mt-auto">Read more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

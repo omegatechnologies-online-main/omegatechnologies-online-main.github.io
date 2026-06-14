@@ -1,10 +1,10 @@
-@import "tailwindcss";
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* AOS Styles */
 @import 'aos/dist/aos.css';
 
-/* Magnetic Button utility classes if needed or smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -38,4 +38,26 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #F05454;
+}
+
+/* Three.js canvas styles */
+#hero-3d-canvas,
+.floating-3d-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* FAQ Details/Summary Accordion Styles */
+details {
+  summary {
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
 }

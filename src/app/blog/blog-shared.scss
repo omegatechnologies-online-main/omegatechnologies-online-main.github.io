@@ -1,0 +1,56 @@
+.blog-hero {
+  @apply relative w-full h-[50vh] min-h-[400px] bg-cover bg-center flex items-center justify-center;
+  
+  &::before {
+    content: '';
+    @apply absolute inset-0 bg-black/60;
+  }
+}
+
+.blog-hero-content {
+  @apply relative z-10 container mx-auto px-6 text-center;
+  
+  h1 {
+    @apply text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 mb-6 drop-shadow-lg;
+    line-height: 1.2;
+  }
+}
+
+.blog-article {
+  @apply container mx-auto px-6 py-16 max-w-4xl bg-white/95 rounded-2xl shadow-xl -mt-16 relative z-20 mb-24;
+
+  h2 {
+    @apply text-3xl font-bold text-[#121212] mt-12 mb-6 border-b-2 border-[#F05454] pb-2;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold text-[#121212] mt-8 mb-4;
+  }
+  
+  p {
+    @apply text-lg text-[#121212]/80 mb-6 leading-relaxed;
+  }
+  
+  ul {
+    @apply list-disc list-inside text-lg text-[#121212]/80 mb-6 space-y-2;
+  }
+
+  strong {
+    @apply text-[#121212] font-bold;
+  }
+
+  code {
+    @apply bg-gray-100 text-[#F05454] px-2 py-1 rounded text-sm;
+  }
+  
+  pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+    code {
+      @apply bg-transparent text-inherit p-0 text-sm;
+    }
+  }
+
+  .cta-button {
+    @apply inline-block px-8 py-4 bg-[#F05454] text-white font-bold rounded-lg shadow-md hover:bg-[#d44545] transition-colors mt-8;
+  }
+}
