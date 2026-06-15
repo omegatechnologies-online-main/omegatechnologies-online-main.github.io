@@ -62,12 +62,28 @@ export class Contact implements OnDestroy {
   onSubmit() {
     if (this.contactForm.valid) {
       this.isSubmitted = true;
-      // In a real app, this would send data to an API
-      setTimeout(() => {
-        this.contactForm.reset();
+      
+      fetch('https://formspree.io/f/meewnznb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(this.contactForm.value)
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Application submitted successfully! We will be in touch soon.');
+          this.contactForm.reset();
+        } else {
+          alert('There was a problem submitting your application. Please try again.');
+        }
         this.isSubmitted = false;
-        alert('Application submitted successfully! We will be in touch soon.');
-      }, 1500);
+      })
+      .catch(error => {
+        alert('There was a network error. Please try again.');
+        this.isSubmitted = false;
+      });
     } else {
       this.contactForm.markAllAsTouched();
     }
