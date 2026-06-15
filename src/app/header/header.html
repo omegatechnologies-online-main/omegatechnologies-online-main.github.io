@@ -1,36 +1,37 @@
-<header [ngClass]="{'bg-[#30475E]/95 backdrop-blur-md shadow-lg': isScrolled, 'bg-white shadow-sm': !isScrolled}" class="fixed w-full z-50 transition-all duration-300 ease-in-out py-4">
+<header [ngClass]="{'bg-[#30475E]/95 backdrop-blur-md shadow-lg': isScrolled, 'bg-white shadow-sm': !isScrolled}" class="fixed w-full z-50 transition-all duration-300 ease-in-out py-4" role="banner">
   <div class="container mx-auto px-6 flex justify-between items-center">
     <!-- Logo -->
-    <a [routerLink]="['/']" class="flex items-center group">
-      <img [src]="isScrolled ? 'OmegaTechnologies-logo-bg-rem.png' : 'OmegaTechnologies-full-ng-rem.png'" alt="Omega Technologies" class="h-16 group-hover:scale-105 transition-transform duration-300 rounded-sm">
+    <a [routerLink]="['/']" class="flex items-center group" aria-label="Omega Technologies — Home">
+      <img [src]="isScrolled ? 'OmegaTechnologies-logo-bg-rem.png' : 'OmegaTechnologies-full-ng-rem.png'" alt="Omega Technologies Logo" class="h-16 group-hover:scale-105 transition-transform duration-300 rounded-sm" width="auto" height="64">
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-8">
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
       <a [routerLink]="['/']" fragment="services" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-base font-medium transition-colors duration-200">Services</a>
 
       <a [routerLink]="['/team']" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-base font-medium transition-colors duration-200">Team</a>
       <a [routerLink]="['/stories']" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-base font-medium transition-colors duration-200">Stories</a>
       <a [routerLink]="['/contact']" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-base font-medium transition-colors duration-200">Contact</a>
+      <a [routerLink]="['/blogs']" [ngClass]="{'text-white/90 hover:text-white': isScrolled, 'text-[#121212]/80 hover:text-[#121212]': !isScrolled}" class="text-base font-medium transition-colors duration-200">Blogs</a>
 
-      <a [routerLink]="['/contact']" class="bg-[#F05454] hover:bg-[#d94444] text-white px-8 py-3 rounded-full font-medium text-base transition-all duration-300 hover:shadow-[0_0_15px_rgba(240,84,84,0.4)] hover:-translate-y-0.5">
+      <a [routerLink]="['/contact']" id="nav-cta-enquire" class="bg-[#F05454] hover:bg-[#d94444] text-white px-8 py-3 rounded-full font-medium text-base transition-all duration-300 hover:shadow-[0_0_15px_rgba(240,84,84,0.4)] hover:-translate-y-0.5">
         Enquire now!
       </a>
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-md focus:outline-none" [ngClass]="{'text-white': isScrolled, 'text-[#121212]': !isScrolled}">
-      <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-md focus:outline-none" [ngClass]="{'text-white': isScrolled, 'text-[#121212]': !isScrolled}" [attr.aria-expanded]="isMobileMenuOpen" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
+      <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </div>
 
   <!-- Mobile Menu Dropdown -->
-  <div *ngIf="isMobileMenuOpen" class="md:hidden absolute top-full left-0 w-full bg-[#30475E] border-t border-white/10 shadow-xl">
+  <div *ngIf="isMobileMenuOpen" id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-[#30475E] border-t border-white/10 shadow-xl" role="navigation" aria-label="Mobile navigation">
     <div class="flex flex-col px-6 py-4 space-y-4">
       <a [routerLink]="['/']" fragment="services" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Services</a>
 

@@ -1,5 +1,8 @@
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-transparent">
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-transparent" aria-label="Hero — Omega Technologies AI Automation">
+  <!-- Three.js 3D Particle Network Background -->
+  <app-three-hero></app-three-hero>
+
   <!-- Decorative Background Elements & Overlay -->
   <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 bg-white/40" style="background-image: url('OMback.png');"></div>
   <div class="absolute inset-0 pointer-events-none z-0">
@@ -8,7 +11,7 @@
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+    <article class="max-w-4xl" data-aos="fade-up" data-aos-duration="1000" aria-label="Main value proposition">
       <h1 class="text-5xl md:text-7xl font-extrabold text-[#121212] tracking-tight leading-tight mb-6">
         You Bring the Spark, <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F05454] to-[#30475E]">We Bring the Fire.</span>
@@ -18,7 +21,7 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
-        <a routerLink="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 bg-[#F05454] text-white font-semibold rounded-full overflow-hidden transition-transform hover:scale-105 shadow-lg shadow-[#F05454]/30">
+        <a routerLink="/contact" id="hero-cta-enquire" class="group relative inline-flex items-center justify-center px-8 py-4 bg-[#F05454] text-white font-semibold rounded-full overflow-hidden transition-transform hover:scale-105 shadow-lg shadow-[#F05454]/30">
           <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
           <span class="relative flex items-center gap-2">
             Enquire now!
@@ -26,7 +29,7 @@
           </span>
         </a>
       </div>
-    </div>
+    </article>
   </div>
 
   <!-- Scroll Indicator -->
@@ -37,7 +40,7 @@
 </section>
 
 <!-- Social Proof Banner (Infinite Marquee) -->
-<section class="bg-[#121212] py-6 border-y border-[#30475E]/30 overflow-hidden relative flex items-center">
+<section class="bg-[#121212] py-6 border-y border-[#30475E]/30 overflow-hidden relative flex items-center" aria-label="Trusted partners">
   <div class="absolute left-0 w-32 h-full bg-gradient-to-r from-[#121212] to-transparent z-10"></div>
   <div class="absolute right-0 w-32 h-full bg-gradient-to-l from-[#121212] to-transparent z-10"></div>
 
@@ -52,19 +55,19 @@
 </section>
 
 <!-- Services Section -->
-<section id="services" class="py-24 bg-white/70 backdrop-blur-sm">
+<section id="services" class="py-24 bg-white/70 backdrop-blur-sm" aria-labelledby="services-heading">
   <div class="container mx-auto px-6">
     <div class="max-w-3xl mb-16" data-aos="fade-up">
-      <h2 class="text-[#30475E] font-semibold tracking-wider uppercase text-sm mb-3">Engineering Business Growth</h2>
+      <h2 id="services-heading" class="text-[#30475E] font-semibold tracking-wider uppercase text-sm mb-3">Engineering Business Growth</h2>
       <p class="text-3xl md:text-4xl font-bold text-[#121212] leading-tight">
         We don't do surface-level software. We build scalable digital infrastructure. We manufacture demand. We build systems that move your numbers.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
       <div *ngFor="let service of services; let i = index"
            class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-[#F05454]/20 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-           data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+           data-aos="fade-up" [attr.data-aos-delay]="i * 100" role="listitem">
 
         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#F05454]/5 to-transparent rounded-bl-full -z-0 group-hover:scale-150 transition-transform duration-500"></div>
 
@@ -84,13 +87,13 @@
 </section>
 
 <!-- Leadership Section -->
-<section id="leadership" class="py-24 bg-[#30475E] text-white relative overflow-hidden">
+<section id="leadership" class="py-24 bg-[#30475E] text-white relative overflow-hidden" aria-labelledby="leadership-heading">
   <!-- Tech Grid Background -->
   <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#F5F5F5 1px, transparent 1px), linear-gradient(90deg, #F5F5F5 1px, transparent 1px); background-size: 40px 40px;"></div>
 
   <div class="container mx-auto px-6 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
-      <h2 class="text-[#F05454] font-semibold tracking-wider uppercase text-sm mb-3">The Reason This Works</h2>
+      <h2 id="leadership-heading" class="text-[#F05454] font-semibold tracking-wider uppercase text-sm mb-3">The Reason This Works</h2>
       <h3 class="text-4xl md:text-5xl font-bold mb-6">Run by operators, not just marketers.</h3>
       <p class="text-white/70 text-lg">We've built, scaled, and exited businesses. We engineer the exact systems and teams we use ourselves to generate predictable growth.</p>
     </div>
@@ -106,20 +109,65 @@
   </div>
 </section>
 
+<!-- FAQ Section (AEO Optimized) -->
+<section id="faq" class="py-24 bg-[#F5F5F5]" aria-labelledby="faq-heading">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 id="faq-heading" class="text-[#30475E] font-semibold tracking-wider uppercase text-sm mb-3">Frequently Asked Questions</h2>
+        <p class="text-3xl md:text-4xl font-bold text-[#121212] leading-tight">
+          Everything you need to know about Omega Technologies.
+        </p>
+      </div>
+
+      <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <div *ngFor="let faq of faqs; let i = index"
+             class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300"
+             [class.shadow-lg]="faq.open"
+             [class.border-[#F05454]/20]="faq.open">
+
+          <button (click)="toggleFaq(i)"
+                  class="w-full px-8 py-6 flex items-center justify-between text-left group"
+                  [attr.aria-expanded]="faq.open"
+                  [attr.aria-controls]="'faq-answer-' + i"
+                  [attr.id]="'faq-question-' + i">
+            <h3 class="text-lg font-bold text-[#121212] pr-4 group-hover:text-[#F05454] transition-colors">{{faq.question}}</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="flex-shrink-0 text-[#30475E] transition-transform duration-300"
+                 [class.rotate-180]="faq.open">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <div [attr.id]="'faq-answer-' + i"
+               [attr.aria-labelledby]="'faq-question-' + i"
+               role="region"
+               class="faq-answer overflow-hidden transition-all duration-300"
+               [style.maxHeight]="faq.open ? '500px' : '0px'"
+               [style.opacity]="faq.open ? '1' : '0'">
+            <p class="px-8 pb-6 text-[#121212]/70 leading-relaxed">{{faq.answer}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Team / Scaling CTA Section -->
-<section id="team" class="py-32 bg-white/70 backdrop-blur-sm relative">
+<section id="team" class="py-32 bg-white/70 backdrop-blur-sm relative" aria-labelledby="cta-heading">
   <div class="container mx-auto px-6">
     <div class="bg-[#121212] rounded-3xl p-10 md:p-20 text-center relative overflow-hidden shadow-2xl" data-aos="fade-up">
       <!-- Glow effect -->
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#F05454]/20 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto">
-        <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">Scale is a team sport.</h2>
+        <h2 id="cta-heading" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">Scale is a team sport.</h2>
         <p class="text-xl text-gray-300 mb-12 leading-relaxed">
           Great software means nothing if your workflows are broken or your marketing is bleeding cash. We provide the developers, AI engineers, and strategists you'd never be able to hire alone.
         </p>
 
-        <a routerLink="/contact" class="group inline-flex items-center justify-center px-10 py-5 bg-[#F05454] text-white text-xl font-bold rounded-full transition-all duration-300 hover:bg-[#d94444] hover:scale-105 shadow-[0_0_40px_rgba(240,84,84,0.3)] hover:shadow-[0_0_60px_rgba(240,84,84,0.5)]">
+        <a routerLink="/contact" id="cta-enquire" class="group inline-flex items-center justify-center px-10 py-5 bg-[#F05454] text-white text-xl font-bold rounded-full transition-all duration-300 hover:bg-[#d94444] hover:scale-105 shadow-[0_0_40px_rgba(240,84,84,0.3)] hover:shadow-[0_0_60px_rgba(240,84,84,0.5)]">
           Enquire now!
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="ml-3 group-hover:translate-x-2 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>

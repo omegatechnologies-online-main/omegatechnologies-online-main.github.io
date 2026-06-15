@@ -3,9 +3,37 @@ import { Home } from './home/home';
 import { Contact } from './contact/contact';
 import { Team } from './team/team';
 import { Stories } from './stories/stories';
+import { Blog } from './blog/blog';
+import { OmegaTechHelpBlog } from './blog/omega-tech-help/omega-tech-help';
+import { HiddenArchitectureBlog } from './blog/hidden-architecture/hidden-architecture';
+import { AiAutomationAgencyBlog } from './blog/ai-automation-agency/ai-automation-agency';
+import { GlobalAiLocalizationBlog } from './blog/global-ai-localization/global-ai-localization';
+import { AlgorithmicPseoBlog } from './blog/algorithmic-pseo/algorithmic-pseo';
+import { EmailDeliverabilityBlog } from './blog/email-deliverability/email-deliverability';
+import { EnterpriseAiSynergiesBlog } from './blog/enterprise-ai-synergies/enterprise-ai-synergies';
+import { HyperAutomationStackBlog } from './blog/hyper-automation-stack/hyper-automation-stack';
+import { EnterpriseGrowthBlueprintBlog } from './blog/enterprise-growth-blueprint/enterprise-growth-blueprint';
+import { AlgorithmicDigitalAdvertisingBlog } from './blog/algorithmic-digital-advertising/algorithmic-digital-advertising';
+import { AiAutomationLocalizationBlog } from './blog/ai-automation-localization/ai-automation-localization';
+import { AutomationRoiTrackingBlog } from './blog/automation-roi-tracking/automation-roi-tracking';
+import { NocodePseoStackBlog } from './blog/nocode-pseo-stack/nocode-pseo-stack';
 
 export const routes: Routes = [
   { path: '', component: Home },
+  { path: 'blogs', component: Blog },
+  { path: 'blog/omega-tech-help', component: OmegaTechHelpBlog },
+  { path: 'blog/hidden-architecture-scale', component: HiddenArchitectureBlog },
+  { path: 'blog/ai-automation-agency', component: AiAutomationAgencyBlog },
+  { path: 'blog/global-ai-localization', component: GlobalAiLocalizationBlog },
+  { path: 'blog/algorithmic-pseo', component: AlgorithmicPseoBlog },
+  { path: 'blog/email-deliverability', component: EmailDeliverabilityBlog },
+  { path: 'blog/enterprise-ai-synergies', component: EnterpriseAiSynergiesBlog },
+  { path: 'blog/hyper-automation-stack', component: HyperAutomationStackBlog },
+  { path: 'blog/enterprise-growth-blueprint', component: EnterpriseGrowthBlueprintBlog },
+  { path: 'blog/algorithmic-digital-advertising', component: AlgorithmicDigitalAdvertisingBlog },
+  { path: 'blog/ai-automation-localization', component: AiAutomationLocalizationBlog },
+  { path: 'blog/automation-roi-tracking', component: AutomationRoiTrackingBlog },
+  { path: 'blog/nocode-pseo-stack', component: NocodePseoStackBlog },
   { path: 'contact', component: Contact },
   { path: 'team', component: Team },
   { path: 'stories', component: Stories },

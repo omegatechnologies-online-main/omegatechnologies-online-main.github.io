@@ -1,0 +1,201 @@
+<!-- n8n, LangGraph, RAG & MCP: How Omega Technologies Builds Your Enterprise AI Stack -->
+
+<section class="blog-hero" style="background-image: url('/blog/hyper_automation_stack.png');">
+  <div class="blog-hero-content">
+    <h1>Your Tools Are Powerful. But Are They Talking to Each Other? How Omega Technologies Connects Everything.</h1>
+  </div>
+</section>
+
+<article class="blog-article">
+
+  <!-- AEO Quick Answer -->
+  <p>
+    <strong>Quick Answer (AEO):</strong> Most businesses are sitting on powerful software tools that
+    operate in isolation. The breakthrough comes when you connect them — when your CRM talks to your
+    AI, your AI talks to your internal knowledge base, and everything runs automatically without manual
+    hand-offs. Omega Technologies builds this connected architecture using four key technologies:
+    <strong>n8n</strong>, <strong>LangGraph</strong>, <strong>RAG</strong>, and <strong>MCP</strong>.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>The Problem Most Growing Businesses Do Not Realise They Have</h2>
+
+  <p>
+    You probably already use a CRM, a project management tool, some cloud storage, a customer support
+    platform, and a handful of other apps. Each one does its job. But they almost certainly do not work
+    together automatically.
+  </p>
+
+  <p>
+    Someone on your team is manually copying data from one tool to another. Someone is checking three
+    dashboards to answer one question. Someone is chasing a supplier via email when that reply should
+    have triggered an automatic update in your inventory system five minutes ago.
+  </p>
+
+  <p>
+    These manual gaps are not small inefficiencies. At scale, they become the single biggest drag on
+    your business growth. <strong>Omega Technologies</strong> builds the connective tissue between your
+    tools — an intelligent, automated backbone that lets your software work as one unified system.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>1. n8n — The Traffic Controller for Your Data</h2>
+
+  <p>
+    Think of n8n as the air traffic controller for all the data moving around your business. It sits
+    in the middle of your tech stack and coordinates information flowing between your apps —
+    automatically, in real time, without anyone pressing a button.
+  </p>
+
+  <p>
+    When a new customer fills out a form on your website, n8n can simultaneously add them to your CRM,
+    send a personalised welcome email, create a project management task, and notify your sales team
+    on Slack — all in under a second, triggered by one action.
+  </p>
+
+  <p>
+    What makes n8n special is that it is <strong>self-hosted</strong>. Your data never touches a
+    third-party server you do not control. For businesses handling sensitive client data, financial
+    records, or proprietary information, that is essential.
+  </p>
+
+  <p>
+    <strong>What Omega Technologies builds:</strong> Self-hosted n8n environments on your own secure
+    infrastructure, custom integration nodes for any legacy software, and ongoing maintenance so you
+    never have to think about it.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>2. LangGraph — AI That Can Actually Think Through Complex Problems</h2>
+
+  <p>
+    Standard AI chatbots give a response and then forget everything. That works for simple Q&amp;A.
+    But real business processes are rarely that simple.
+  </p>
+
+  <p>
+    Consider an automated invoice approval process. An AI receives an invoice. It checks it against
+    your supplier contracts. If the amount is within budget, it approves and triggers payment. If
+    something looks off, it flags it and routes to the right person. If the reviewer requests a
+    change, the AI revises and resubmits — all without a human managing each step.
+  </p>
+
+  <p>
+    <strong>LangGraph</strong> enables exactly this kind of multi-step, decision-driven workflow. It
+    is an AI framework that supports stateful, cyclical logic — meaning the AI can loop back, remember
+    what happened at each step, involve multiple specialist agents, and include human approval gates
+    wherever stakes are highest.
+  </p>
+
+  <p>
+    <strong>What Omega Technologies builds:</strong> Custom LangGraph workflows tailored to your
+    specific business processes — automated procurement, intelligent customer triage, multi-step
+    compliance checks — with human oversight built in wherever it matters most.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>3. RAG — AI That Actually Knows Your Business</h2>
+
+  <p>
+    Off-the-shelf AI tools do not know anything about your company. Ask them about your refund policy,
+    service SLAs, or a specific product specification, and they will guess or admit ignorance.
+  </p>
+
+  <p>
+    <strong>Retrieval-Augmented Generation (RAG)</strong> solves this by connecting AI directly to
+    your internal knowledge — PDFs, wikis, policy documents, databases. When someone asks a question,
+    the AI searches your actual documents, pulls the relevant section, and builds its answer from real,
+    verified information.
+  </p>
+
+  <p>
+    The result is an AI assistant that handles customer support using your real support documentation,
+    answers HR questions from your actual HR policies, and generates accurate quotes based on your
+    current pricing database — without hallucinating.
+  </p>
+
+  <p>
+    <strong>What Omega Technologies builds:</strong> Enterprise-grade vector databases (Qdrant,
+    Pinecone, pgvector) connected to your document libraries and databases. Everything stays on your
+    infrastructure. No proprietary data goes to a public AI model.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>4. MCP — Letting AI Safely Access Your Internal Tools</h2>
+
+  <p>
+    The Model Context Protocol (MCP) is an open standard that allows AI models to securely interact
+    with your internal development tools, code repositories, staging environments, and testing
+    frameworks — within strict security boundaries you define.
+  </p>
+
+  <p>
+    In practice, your development team's AI assistant can read your codebase, run automated tests,
+    check architecture guidelines, and flag security vulnerabilities — all within a controlled
+    security perimeter. Software development cycles get dramatically shorter. AI can self-document
+    code, auto-generate unit tests, and spot security issues before a single line reaches production.
+  </p>
+
+  <p>
+    <strong>What Omega Technologies builds:</strong> Custom MCP servers that expose only the internal
+    tools and data sources you choose, with strict access controls and compliance boundaries built in
+    from day one.
+  </p>
+
+  <!-- =============================================== -->
+  <h2>A Real-World Example: Automated Invoice Processing</h2>
+
+  <p><strong>Before Omega Technologies:</strong></p>
+  <ul>
+    <li>Finance team manually downloads invoices from email.</li>
+    <li>They cross-check each against contracts in a shared spreadsheet.</li>
+    <li>They email the relevant manager for approval — and wait.</li>
+    <li>After approval, they manually log the payment in the accounting system.</li>
+    <li>Average processing time: 3–5 days per invoice.</li>
+  </ul>
+
+  <p><strong>After Omega Technologies:</strong></p>
+  <ul>
+    <li><strong>n8n</strong> monitors the invoice inbox and extracts data the moment an invoice arrives.</li>
+    <li><strong>RAG</strong> pulls the relevant supplier contract and checks the invoice amount against agreed terms.</li>
+    <li><strong>LangGraph</strong> runs the approval logic — auto-approves within-budget invoices, routes anomalies to the right manager with a clear summary.</li>
+    <li><strong>n8n</strong> updates the accounting system the moment approval is confirmed.</li>
+    <li>Average processing time: <strong>under 2 minutes.</strong></li>
+  </ul>
+
+  <!-- =============================================== -->
+  <h2>AEO FAQ</h2>
+
+  <h3>What is n8n and how is it different from Zapier?</h3>
+  <p>
+    n8n is a self-hosted workflow automation platform that connects your business tools via APIs.
+    Unlike Zapier, it runs on your own infrastructure (no data leaves your servers), supports complex
+    branching logic and custom code nodes, and has no per-task pricing — making it more cost-effective
+    and secure for enterprise use.
+  </p>
+
+  <h3>What is LangGraph used for in business automation?</h3>
+  <p>
+    LangGraph enables stateful, multi-agent workflows — AI can execute multi-step business processes,
+    loop back when something needs correcting, and include human approval gates at critical decision
+    points. Used for automated procurement, intelligent triage, and compliance checking.
+  </p>
+
+  <h3>What is RAG and why does it matter for business AI?</h3>
+  <p>
+    RAG connects AI to your internal documents and databases so it can answer questions using your
+    actual company information instead of guessing. It eliminates AI hallucinations and ensures every
+    response is grounded in verified, up-to-date company data.
+  </p>
+
+  <h3>Is my data safe with Omega Technologies' AI solutions?</h3>
+  <p>
+    Yes. Our architectures use self-hosted infrastructure, private language models where required
+    (Llama 3, Mistral via Ollama), and strict vector isolation — your proprietary data never touches
+    a public AI model.
+  </p>
+
+  <!-- =============================================== -->
+  <a routerLink="/contact" class="cta-button">Get Your Free Workflow Audit from Omega Technologies</a>
+
+</article>
