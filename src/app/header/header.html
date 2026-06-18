@@ -34,10 +34,10 @@
   <div *ngIf="isMobileMenuOpen" id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-[#30475E] border-t border-white/10 shadow-xl" role="navigation" aria-label="Mobile navigation">
     <div class="flex flex-col px-6 py-4 space-y-4">
       <a [routerLink]="['/']" fragment="services" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Services</a>
-
       <a [routerLink]="['/team']" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Team</a>
       <a [routerLink]="['/stories']" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Stories</a>
       <a [routerLink]="['/contact']" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Contact</a>
+      <a [routerLink]="['/blogs']" (click)="toggleMobileMenu()" class="text-white/90 hover:text-white font-medium">Blogs</a>
       <a [routerLink]="['/contact']" (click)="toggleMobileMenu()" class="bg-[#F05454] text-white text-center px-6 py-3 rounded-md font-medium mt-4">Enquire now!</a>
     </div>
   </div>
